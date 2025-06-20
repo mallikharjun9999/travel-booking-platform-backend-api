@@ -6,7 +6,7 @@ const bookingModel = require('../models/bookingModel');
  */
 const getAllBookings = async (req, res) => {
   try {
-    const userId = req.user.id;
+    const userId = req.user?.id;
     const result = await bookingModel.getUserBookings(userId);
     return res.json({ success: true, bookings: result });
   } catch (err) {
@@ -21,7 +21,7 @@ const getAllBookings = async (req, res) => {
  */
 const getBookingDetails = async (req, res) => {
   try {
-    const userId = req.user.id;
+    const userId = req.user?.id;
     const { type, bookingId } = req.params;
     // Validate type
     if (!['flight', 'hotel', 'package'].includes(type)) {
@@ -43,7 +43,7 @@ const getBookingDetails = async (req, res) => {
  */
 const cancelBooking = async (req, res) => {
   try {
-    const userId = req.user.id;
+    const userId = req.user?.id;
     const { type, bookingId } = req.params;
     if (!['flight', 'hotel', 'package'].includes(type)) {
       return res.status(400).json({ success: false, message: 'Invalid booking type' });

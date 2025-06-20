@@ -18,8 +18,6 @@ const hotelRoutes = require('./routes/hotelRoutes');
 const packageRoutes = require('./routes/packageRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
 const paymentRoutes = require('./routes/paymentRoutes');
-// const airportRoutes = require('./routes/airportRoutes');
-// const cityRoutes = require('./routes/cityRoutes');
 
 // Route Mapping
 app.use('/api/auth', authRoutes);
@@ -28,8 +26,6 @@ app.use('/api/hotels', hotelRoutes);
 app.use('/api/packages', packageRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/payments', paymentRoutes);
-// app.use('/api/airports', airportRoutes);
-// app.use('/api/cities', cityRoutes);
 
 // Root Health Check
 app.get('/', (req, res) => {
