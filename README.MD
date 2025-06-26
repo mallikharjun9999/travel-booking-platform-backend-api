@@ -22,7 +22,7 @@ The Travel Booking Platform API is a comprehensive backend service for managing 
 1. **Clone the repository:**
    ```bash
    git clone <your-repository-url>
-   cd travel-booking-platform
+   cd travel-booking-platform-backend-api
    ```
 
 2. **Install dependencies:**
